@@ -95,7 +95,7 @@ public:
     plan_trajectory_kinematics();
     RCLCPP_INFO(LOGGER, "Executing Joint Value Trajectory...");
     execute_trajectory_kinematics();
-#if 1
+
     RCLCPP_INFO(LOGGER, "Going to Pregrasp Position...");
     // setup the goal pose target
     RCLCPP_INFO(LOGGER, "Preparing Goal Pose Trajectory...");
@@ -106,9 +106,7 @@ public:
     plan_trajectory_kinematics();
     RCLCPP_INFO(LOGGER, "Executing Goal Pose Trajectory...");
     execute_trajectory_kinematics();
-#endif
 
-#if 1
     // open the gripper
     RCLCPP_INFO(LOGGER, "Opening Gripper...");
     // setup the gripper target by pose name
@@ -184,7 +182,6 @@ public:
     execute_trajectory_kinematics();
 
     RCLCPP_INFO(LOGGER, "Approach Retreat Trajectory Execution Complete");
-#endif
   }
 
 private:

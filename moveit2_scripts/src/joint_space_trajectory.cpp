@@ -76,6 +76,12 @@ public:
 
     // setup the joint value target
     RCLCPP_INFO(LOGGER, "Preparing Joint Value Trajectory...");
+    setup_joint_value_target(
+        +0.0000, +2.3562, +1.5708, -1.5708, +1.5708,
+        // setup_joint_value_target(+0.0000, 2.3562, +1.5708, -1.5708, -1.5708,
+
+        +0.0000);
+
     setup_joint_value_target(+0.0000, -2.3562, +1.5708, -1.5708, -1.5708,
                              +0.0000);
     // plan and execute the trajectory

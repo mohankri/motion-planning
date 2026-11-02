@@ -134,6 +134,21 @@ ament_target_dependencies(kinematics_plugin_trajectory
     moveit_ros_planning
     control_msgs)
 
+# Generate the executable
+add_executable(pick_and_place_trajectory
+    src/pick_and_place_trajectory.cpp)
+target_include_directories(pick_and_place_trajectory
+    PUBLIC include)
+ament_target_dependencies(pick_and_place_trajectory
+    ament_cmake
+    rclcpp
+    rclcpp_action
+    moveit_core
+    moveit_ros_planning_interface
+    interactive_markers
+    moveit_ros_planning
+    control_msgs)
+
 # Install the executable
 install(TARGETS 
     joint_space_trajectory
@@ -144,6 +159,7 @@ install(TARGETS
 	cartesian_trajectory
 	draw_x_cartesian_trajectory
 	kinematics_plugin_trajectory
+	pick_and_place_trajectory
     DESTINATION lib/${PROJECT_NAME}
 )
 
